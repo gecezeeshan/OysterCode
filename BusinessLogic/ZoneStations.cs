@@ -76,15 +76,15 @@ namespace OysterCode.BusinessLogic
 
         }
 
-        public void FindBestZone(ZoneStations oysterZoneStations, int sourceStationId, int destinationStationId, out int zoneId1, out int zoneId2)
+        public void FindBestZone( int sourceStationId, int destinationStationId, out int zoneId1, out int zoneId2)
         {
-            List<ZoneStation> lstZSSource = oysterZoneStations.ZoneStationLst.FindAll(a => a.StationID == sourceStationId);
-            List<ZoneStation> lstZSDestination = oysterZoneStations.ZoneStationLst.FindAll(a => a.StationID == destinationStationId);
+            List<ZoneStation> lstZSSource = this.ZoneStationLst.FindAll(a => a.StationID == sourceStationId);
+            List<ZoneStation> lstZSDestination = this.ZoneStationLst.FindAll(a => a.StationID == destinationStationId);
             zoneId1 = 1;
             zoneId2 = 3;
             if (lstZSSource.Count > 1 || lstZSDestination.Count > 1)
             {
-                oysterZoneStations.GetZoneForFare(lstZSSource, lstZSDestination, out zoneId1, out zoneId2);
+                this.GetZoneForFare(lstZSSource, lstZSDestination, out zoneId1, out zoneId2);
             }
             else
             {

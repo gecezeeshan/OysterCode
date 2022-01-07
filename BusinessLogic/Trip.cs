@@ -29,7 +29,7 @@ namespace OysterCode.BusinessLogic
             Amount = amount;
         }
 
-        
+
         public string PrintTrip()
         {
             return String.Format("{0} {1} to {2}, fare is {3:0.00}", Medium, Station1, Station2, Amount);
@@ -149,7 +149,7 @@ namespace OysterCode.BusinessLogic
             Console.WriteLine("-------------------------------------");
             double total = 0;
             Journeys.ForEach(a => total += a.Amount);
-            Console.WriteLine(String.Format("Total amount is {0:0.00}" , total));
+            Console.WriteLine(String.Format("Total amount is {0:0.00}", total));
 
             Console.WriteLine(String.Format("Balance is {0:0.00}", (cardAmount - total)));
 

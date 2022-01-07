@@ -96,7 +96,7 @@ namespace OysterCode.BusinessLogic
             else
             {
                 
-                oysterZoneStations.FindBestZone(oysterZoneStations, sourceStationId, destinationStationId, out int zoneId1, out int zoneId2);
+                oysterZoneStations.FindBestZone(sourceStationId, destinationStationId, out int zoneId1, out int zoneId2);
                 fare = GetFare(zoneId1, zoneId2);
             }
             Console.WriteLine(String.Format("The fare from {1} to {2} is {0:0.00} ", fare, oysterStation.GetStation(sourceStationId), oysterStation.GetStation(destinationStationId)));
