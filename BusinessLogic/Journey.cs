@@ -74,7 +74,7 @@ namespace OysterCode.BusinessLogic
                     Console.WriteLine("Invalid choice!");
                 }
                 
-                 Console.WriteLine("Enter source.");
+                 Console.WriteLine("Enter source");
                
                 string source = Console.ReadLine();
                 int s1 = int.Parse(source);
