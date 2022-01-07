@@ -48,7 +48,8 @@ namespace OysterCode.BusinessLogic
             StationLst.Add(new Station(id++, "Earl’s Court"));
             StationLst.Add(new Station(id++, "Hammersmith"));
             StationLst.Add(new Station(id++, "Arsenal"));
-            StationLst.Add(new Station(id++, "Wimbledon"));           
+            StationLst.Add(new Station(id++, "Wimbledon"));
+            StationLst.Add(new Station(id++, "Chelsea"));
 
         }
 

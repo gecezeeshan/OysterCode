@@ -42,7 +42,7 @@ namespace OysterCode.BusinessLogic
 
         public List<Fare> FareLst { get; set; }
 
-        public Fares(ZoneStations zoneStations)
+        public Fares()
         {
             FareLst = new List<Fare>();
             AddFares();
@@ -87,17 +87,16 @@ namespace OysterCode.BusinessLogic
        
 
         public double CaluculateFare(Stations oysterStation, ZoneStations oysterZoneStations, int sourceStationId,  int destinationStationId,  int m1)
-        {
-            //GetInput(oysterStation, out int sourceStationId, out int destinationStationId, out int m1);
-            double fare = 3.20;
+        {            
+            double fare;
             if (m1 == 2)
             {
                 fare = 1.80;
             }
             else
             {
-                int zoneId1, zoneId2;
-                oysterZoneStations.FindBestZone(oysterZoneStations, sourceStationId, destinationStationId, out zoneId1, out zoneId2);
+                
+                oysterZoneStations.FindBestZone(oysterZoneStations, sourceStationId, destinationStationId, out int zoneId1, out int zoneId2);
                 fare = GetFare(zoneId1, zoneId2);
             }
             Console.WriteLine(String.Format("The fare from {1} to {2} is {0:0.00} ", fare, oysterStation.GetStation(sourceStationId), oysterStation.GetStation(destinationStationId)));

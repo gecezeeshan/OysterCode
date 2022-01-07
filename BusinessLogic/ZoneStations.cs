@@ -57,6 +57,7 @@ namespace OysterCode.BusinessLogic
             ZoneStationLst.Add(new ZoneStation(id++, 2, 5));
 
             ZoneStationLst.Add(new ZoneStation(id++, 3, 6));
+            ZoneStationLst.Add(new ZoneStation(id++, 3, 7));
 
         }
 
